@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .first,.second,.third,.fourth{
+        width: 100px;
+         padding: 10px 20px;
+        background-color: yellow;
+        text-align: center;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <a href="" onclick="alert('But They say I`m not')">I'm nepali</a>
+    </div>
+    <div class="second">
+        <a href="" onclick="callingFunction()">I'm nepali</a>
+    </div>
+    <div class="third" id="thirdway">
+        <a href="">I'm nepali</a>
+    </div>
+    <div class="fourth" id="fourthway">
+        <a href="">I'm nepali</a>
+    </div>
+    <script>
+        // 2nd way of writting function
+        const callingFunction=()=>{
+alert('no you are not nepali')
+        };
+        // 3rd way of writting function
+        const thirdway=document.getElementById("thirdway");
+        thirdway.onclick=function(){
+            alert('no  no you are not nepali')
+        }
+        // 4th way of writting function
+        const fourthway=document.querySelector("#fourthway");
+        fourthway.addEventListener("click",()=>{
+            alert("i love nepal")
+        });
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    body{
+        width: 100%;
+        height: 100vh;
+    }
+    .todo-wrapper{
+        margin: 120px auto;
+        max-width: 450px;
+        width: 100%;
+        background-color: brown;
+        padding: 15px;
+        color: white;
+        border-radius: 3px;
+    }
+    .todo-wrapper .input-list{
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+    }
+    .todo-wrapper .input-list input{
+        height: 42px;
+        width: 100%;
+    }
+    .todo-wrapper .input-list input:focus{
+        outline: none;
+    }
+    .todo-wrapper .input-list button{
+        height: 42px;
+        width: 42px;
+        border: none;
+        outline: none;
+        background-color: rgb(19, 141, 135);
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        pointer-events: none;
+        opacity: 0.6;
+    }
+    .todo-wrapper .input-list button .active{
+        opacity: 1;
+        pointer-events: auto;
+    }
+.todo-wrapper .todo-list{
+    list-style: none;
+    padding-top: 10px;
+}
+.todo-wrapper .todo-list li{
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    color: #333333;
+    margin: 10px 0;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+.todo-wrapper .todo-list li span{
+    cursor: pointer;
+}
+
+    </style>
+</head>
+
+<body>
+<div class="todo-wrapper">
+    <h2>Todo app</h2>
+    <div class="input-list">
+        <input type="text" placeholder=" add your new item">
+        <button> <i class="fas fa-plus"></i></button>
+    </div>
+    <ul class="todo-list">
+        <li>Lorem Ipsum is simply dummy text of the printing<span> <i class="fas fa-trash"></i></span></li>
+        <li>Lorem Ipsum is simply dummy text of the printing<span> <i class="fas fa-trash"></i></span></li>
+        <li>Lorem Ipsum is simply dummy text of the printing<span> <i class="fas fa-trash"></i></span></li>
+        <li>Lorem Ipsum is simply dummy text of the printing<span> <i class="fas fa-trash"></i></span></li>
+        <li>Lorem Ipsum is simply dummy text of the printing<span> <i class="fas fa-trash"></i></span></li>
+    </ul>
+</div>
+
+</body>
+<script>
+    const inputBox =document.querySelector("input-list input");
+    const addButton =document.querySelector("input-list button");
+
+    inputBox.onKeyup=()=>{
+        let userData = inputBox.value;//getting user entered value
+        if(userData.trim()!=0){// if user values arent only space
+            addButton.classList.add("active")//active the add button
+        }
+    }
+
+</script>
+
+</html>

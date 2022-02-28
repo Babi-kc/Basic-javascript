@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+        <label for="">Your name</label>
+        <input type="text" name="" id="ice">
+        <br>
+        <label for="">choose an ice cream flavor
+            <select name="iceCreams" id="iceCreams">  
+                <!-- onchange="selectElement()" -->
+                <option value="">Select One</option>
+                <option value="Chocolate">Chocolate</option>
+                <option value="Vanilla">Vanilla</option>
+            </select>
+        </label>
+        <br>
+    <div id="result"></div>
+    </div>
+</div>
+<script>
+//     const selectElement=()=>{
+//         const inputChange =document.getElementById('ice').value;
+//         const iceCreams=document.getElementById('iceCreams').value;
+//         const result =document.getElementById('result');
+//         result.innerHTML =`Miss ${inputChange} select ${iceCreams} ice-cream flavour`;
+// console.log(`${inputChange} and ${iceCreams}`);
+
+//    };
+const iceCreams=document.getElementById('iceCreams');
+iceCreams.addEventListener('change',()=>{
+    const inputChange =document.getElementById('ice').value;
+        const iceCreams=document.getElementById('iceCreams').value;
+        const result =document.getElementById('result');
+        result.innerHTML =`Miss ${inputChange} select ${iceCreams} ice-cream flavour`;
+
+});
+</script>
+</body>
+</html>

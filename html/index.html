@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- <b>find out your age in dog year</b>
+<form action="">
+  <table>
+    <tr> enter yourage 
+      <td>
+        <input type="text" name="myage" size="15">
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" value="calculate" onclick="cyears(this.form)">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        your age in dog years is
+      </td>
+      <td>
+        <input type="text " name="dogage" size="15">
+      </td>
+    </tr>
+  </table>
+
+</form> -->
+<div class="parents-div">
+  <div class="first-child">Hello world</div>
+  <div class="second-child">Hello Nepal</div>
+  <div class="third-child">Hello kathmandu</div>
+</div>
+<p id="demo">Click on the button to see the time</p>
+<button onclick="myFunction()">Try again</button>
+<p id="content-nep">Im nepali</p>
+<button onclick="changeContent()">Click here</button>
+<script>
+  function myFunction() {
+    var t= new Date();
+    t.setHours(5)
+    document.getElementById("demo").innerHTML=t
+  }
+  // (function () {
+  //   setInterval(()=>{
+  //     console.log(new Date().toLocaleTimeString());
+  //   var t= new Date().toLocaleTimeString();
+  //     document.getElementById("demo").innerHTML=t
+  //   },1000)
+  // })();
+  // direct###
+  // const changeContent=()=> {
+  //   document.getElementById("content-nep").innerHTML="I Love Nepal";
+  // };
+  // by taking the reference###
+  const contentChange= document.getElementById("content-nep");/*got error whyyyyyyy */
+  contentChange.innerHTML="I Love Nepal";
+</script>
+
+</body>
+
+<!-- <script src="./js/index.js"></script> -->
+</html>

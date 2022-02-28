@@ -1,0 +1,7 @@
+body{
+    text-align: center;
+    font-size: 30px;
+}
+.first-child,.second-child{
+    margin-bottom: 15px;
+}

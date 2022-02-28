@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .eventinjs{
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }        .event-see{
+            width: 100px;
+             padding: 10px 20px;
+            background-color: yellow;
+            text-align: center;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        </style>
+</head>
+<body>
+    <div class="eventinjs">
+    <p>let's see what is event object</p>
+    <div class="event-see" id="fourthway">
+        <a href="">Event Listeners</a>
+    </div>
+</div>
+<script>
+    const fourthway=document.getElementById('fourthway');
+    const checkEvent=()=>{
+        alert('hi there');
+        console.log(event);
+        console.log(event.target);
+        console.log(event.type);
+    }
+    fourthway.addEventListener('click',checkEvent);
+</script>
+</body>
+</html>
